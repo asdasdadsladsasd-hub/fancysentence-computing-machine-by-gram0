@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <title>Fancyifier</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="importmap">
+  {
+    "imports": {}
+  }
+  </script>
+</head>
+<body>
+  <!-- Intro overlay -->
+  <div id="intro" class="intro">
+    <div class="introInner">
+      <div class="introText">designed by the bait of 67 ritual</div>
+    </div>
+  </div>
+
+  <main id="app">
+    <div class="card">
+      <textarea id="input" placeholder="Type a sentence..." maxlength="400" rows="3" autofocus></textarea>
+
+      <div class="controls">
+        <div class="stars" id="stars" role="slider" aria-valuemin="1" aria-valuemax="10" aria-valuenow="5" tabindex="0"></div>
+        <div class="level" id="level">5</div>
+      </div>
+
+      <div class="actions">
+        <button id="transform">Transform</button>
+        <button id="clear" class="muted">Clear</button>
+      </div>
+
+      <div id="resultWrap" class="resultWrap hidden">
+        <div class="resultHeader">
+          <span>Result</span>
+          <div>
+            <button id="copy" title="Copy">Copy</button>
+            <button id="edit" title="Edit">Edit</button>
+          </div>
+        </div>
+        <div id="result" class="result"></div>
+      </div>
+
+      <div id="hint" class="hint">Choose 1–4: simpler; 5: balanced; 6–10: increasingly ornate.</div>
+    </div>
+  </main>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>
